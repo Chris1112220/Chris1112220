@@ -16,7 +16,7 @@ I'm a staff accountant at Drexel University who builds the bots, too. I've put 1
 
 ## Tech stack
 
-**Automation:** UiPath Studio · UiPath Orchestrator · Unattended Robots · UiPath Test activities · OCR / PDF extraction · Excel & Power Query · n8n<br>
+**Automation:** UiPath Studio · REFramework · UiPath Orchestrator · Unattended Robots · UiPath Test activities · OCR / PDF extraction · Excel & Power Query · n8n<br>
 **AI:** Google Gemini · LLM structured extraction with JSON schemas · human-in-the-loop review<br>
 **Code:** Python · JavaScript · Google Apps Script · React · Tailwind CSS · Flask · SQL (PostgreSQL / SQLite) · Git<br>
 **Finance systems:** Banner Finance · BlackLine · OnBase · SAP ERP · QuickBooks · Google Workspace APIs
@@ -25,8 +25,8 @@ I'm a staff accountant at Drexel University who builds the bots, too. I've put 1
 
 | Project | What it does | Built with |
 |---|---|---|
+| [**uipath-reframework-invoice-posting**](https://github.com/Chris1112220/uipath-reframework-invoice-posting) | UiPath REFramework bot (Dispatcher + Performer) that validates vendor invoices with a 3-way match, posts balanced AP journal entries, and handles business vs. system exceptions with queue retries. Config.xlsx-driven, 9 Studio test cases, all data fictional. | UiPath Studio, REFramework, Orchestrator queues, Excel |
 | [**invoice-extraction-n8n**](https://github.com/Chris1112220/invoice-extraction-n8n) | Accounts-payable intake for small firms. Drop a PDF invoice in Google Drive and an LLM extracts the fields, code reconciles the totals, a Google Sheet logs it, the file is renamed, and anything off is flagged *Needs Review* and emailed to a person. Fails over to backup models if one errors; passes 5/5 test invoices, including edge cases. | n8n, Google Gemini, Drive / Sheets / Gmail APIs, JavaScript, Python |
-| **UiPath REFramework showcase** *(coming soon)* | A public UiPath REFramework project with Config.xlsx and an Orchestrator queue, built on fictitious data to show how I structure production bots. | UiPath Studio, REFramework, Orchestrator |
 | [**ChrisDev-Portfolio**](https://github.com/Chris1112220/ChrisDev-Portfolio) | My portfolio site, with every project kept in one data file and filterable by type ([live site](https://chris-dev-portfolio-one.vercel.app)). | React, React Router, Tailwind CSS, Vercel |
 | [**life-dashboard**](https://github.com/Chris1112220/life-dashboard) | A personal dashboard installed as an iPhone web app: weather, calendar, workout tracking, a weekly checklist that resets itself, and reminders pushed in from an iOS Shortcut. No secrets in the source; it's token-protected. | Google Apps Script, Google Sheets & Calendar, Open-Meteo, HTML/JS |
 
