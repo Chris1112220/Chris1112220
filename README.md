@@ -26,6 +26,7 @@ I'm a staff accountant at Drexel University who builds the bots, too. I've put 1
 | Project | What it does | Built with |
 |---|---|---|
 | [**uipath-reframework-invoice-posting**](https://github.com/Chris1112220/uipath-reframework-invoice-posting) | UiPath REFramework bot (Dispatcher + Performer) that validates vendor invoices with a 3-way match, posts balanced AP journal entries, and handles business vs. system exceptions with queue retries. Config.xlsx-driven, 9 Studio test cases, all data fictional. | UiPath Studio, REFramework, Orchestrator queues, Excel |
+| [**uipath-ach-pdf-splitter**](https://github.com/Chris1112220/uipath-ach-pdf-splitter) | Unattended bot that splits combined bank ACH remittance PDFs into one file per payment (multi-page transactions kept together), names each by payer and amount, files it by fiscal period, and skips already-processed reports by SHA-256 hash. Sanitized rebuild of a production bot that saves about **$50K/year**; sample data is fictional. | UiPath Studio (C#), Orchestrator, PDF activities, Excel config |
 | [**invoice-extraction-n8n**](https://github.com/Chris1112220/invoice-extraction-n8n) | Accounts-payable intake for small firms. Drop a PDF invoice in Google Drive and an LLM extracts the fields, code reconciles the totals, a Google Sheet logs it, the file is renamed, and anything off is flagged *Needs Review* and emailed to a person. Fails over to backup models if one errors; passes 5/5 test invoices, including edge cases. | n8n, Google Gemini, Drive / Sheets / Gmail APIs, JavaScript, Python |
 | [**ChrisDev-Portfolio**](https://github.com/Chris1112220/ChrisDev-Portfolio) | My portfolio site, with every project kept in one data file and filterable by type ([live site](https://chris-dev-portfolio-one.vercel.app)). | React, React Router, Tailwind CSS, Vercel |
 | [**life-dashboard**](https://github.com/Chris1112220/life-dashboard) | A personal dashboard installed as an iPhone web app: weather, calendar, workout tracking, a weekly checklist that resets itself, and reminders pushed in from an iOS Shortcut. No secrets in the source; it's token-protected. | Google Apps Script, Google Sheets & Calendar, Open-Meteo, HTML/JS |
@@ -33,10 +34,10 @@ I'm a staff accountant at Drexel University who builds the bots, too. I've put 1
 ## Impact (production UiPath bots)
 
 - **~1,800 hours/year saved:** journal-entry bot used by 50 finance staff
-- **$50,000/year saved:** ACH PDF splitter bot running unattended in UiPath Orchestrator
+- **$50,000/year saved:** ACH PDF splitter bot running unattended in UiPath Orchestrator ([sanitized code](https://github.com/Chris1112220/uipath-ach-pdf-splitter))
 - **72 hours/year saved:** bank-statement OCR posting bot
 
-*My work bots run on private systems, so their code isn't public.*
+*My work bots run on private systems, so their code isn't public. The ACH splitter is published as a sanitized rebuild with fictional data.*
 
 ## Currently learning
 
