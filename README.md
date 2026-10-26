@@ -42,8 +42,9 @@ I'm a staff accountant at Drexel University who builds the bots, too. I've put 1
 
 ## Currently learning
 
-- **UiPath Agentic Automation:** combining AI agents with RPA robots
-- Preparing for the **UiPath Automation Developer Professional (ADPv1)** certification
+- **UiPath Agentic:** combining AI agents with RPA robots
+- **ADP:** preparing for the UiPath Automation Developer Professional (ADPv1) certification
+- **Power Automate:** recently earned a certificate
 
 ## Connect
 
