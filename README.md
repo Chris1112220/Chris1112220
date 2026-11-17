@@ -1,8 +1,8 @@
-# Hi, I'm Chris Roberts 👋
+# Hi, I'm Chris Roberts
 
-**Accountant who builds automation: UiPath RPA developer and AI workflow builder in Philadelphia.**
+**UiPath RPA developer and AI workflow builder in Philadelphia.**
 
-I'm a staff accountant at Drexel University who builds the bots, too. I've put 10+ production UiPath bots into service, running unattended so a whole finance department can use them. The biggest saves about 1,800 hours a year. I design every automation the way an accountant would: the robot or AI does the work, and code checks the numbers before anything reaches the books.
+I'm an automation accountant at Drexel University who builds bots. I've put 10+ production UiPath bots into service, running unattended so a whole finance department can use them. Together they save 5,000+ hours (~$200K) a year. The biggest, an ACH document-intake bot, saves 4,300+ hours (~$156K) a year across 20 staff accountants. I design every automation the way an accountant would: the robot or AI does the work, and code checks the numbers before anything reaches the books.
 
 🎯 **Open to:** UiPath / RPA Developer and Agentic Automation roles.
 
@@ -26,25 +26,32 @@ I'm a staff accountant at Drexel University who builds the bots, too. I've put 1
 | Project | What it does | Built with |
 |---|---|---|
 | [**uipath-reframework-invoice-posting**](https://github.com/Chris1112220/uipath-reframework-invoice-posting) | UiPath REFramework bot (Dispatcher + Performer) that validates vendor invoices with a 3-way match, posts balanced AP journal entries, and handles business vs. system exceptions with queue retries. Config.xlsx-driven, 9 Studio test cases, all data fictional. | UiPath Studio, REFramework, Orchestrator queues, Excel |
-| [**uipath-ach-pdf-splitter**](https://github.com/Chris1112220/uipath-ach-pdf-splitter) | Unattended bot that splits combined bank ACH remittance PDFs into one file per payment (multi-page transactions kept together), names each by payer and amount, files it by fiscal period, and skips already-processed reports by SHA-256 hash. Sanitized rebuild of a production bot that saves about **$50K/year**; sample data is fictional. | UiPath Studio (C#), Orchestrator, PDF activities, Excel config |
-| [**langgraph-ap-exception-agent**](https://github.com/Chris1112220/langgraph-ap-exception-agent) | *In progress.* AI agent that triages accounts-payable invoice exceptions (price variances, missing POs, duplicates, vendor holds). Built so far: a Postgres + pgvector AP schema seeded with 20 fictional exception invoices, and deterministic tools for fuzzy vendor lookup, three-way match, and duplicate detection. Next: policy RAG, the LangGraph agent loop, and human-in-the-loop approval. | LangGraph, Google Gemini, Python, Pydantic, PostgreSQL + pgvector, Docker |
+| [**uipath-ach-pdf-splitter**](https://github.com/Chris1112220/uipath-ach-pdf-splitter) | Unattended bot that splits combined bank ACH remittance PDFs into one file per payment (multi-page transactions kept together), names each by payer and amount, files it by fiscal period, and skips already-processed reports by SHA-256 hash. Sanitized rebuild of a production bot that saves **4,300+ hours (~$156K) a year** across 20 staff accountants; sample data is fictional. | UiPath Studio (C#), Orchestrator, PDF activities, Excel config |
+| [**email-triage-agent**](https://github.com/Chris1112220/email-triage-agent) | LangGraph + Gemini agent that reads Gmail, classifies each email, and drafts a reply when one is needed. A keyword-rule fallback kicks in if the models fail, and it never sends anything without a human. Evals improved from 60% to 100% after the category definitions were tightened. FastAPI endpoint, pytest tests, and GitHub Actions CI on every push. | LangGraph, Google Gemini, Gmail API, FastAPI, pytest, GitHub Actions |
 | [**invoice-extraction-n8n**](https://github.com/Chris1112220/invoice-extraction-n8n) | Accounts-payable intake for small firms. Drop a PDF invoice in Google Drive and an LLM extracts the fields, code reconciles the totals, a Google Sheet logs it, the file is renamed, and anything off is flagged *Needs Review* and emailed to a person. Fails over to backup models if one errors; passes 5/5 test invoices, including edge cases. | n8n, Google Gemini, Drive / Sheets / Gmail APIs, JavaScript, Python |
 | [**ChrisDev-Portfolio**](https://github.com/Chris1112220/ChrisDev-Portfolio) | My portfolio site, with every project kept in one data file and filterable by type ([live site](https://chris-dev-portfolio-one.vercel.app)). | React, React Router, Tailwind CSS, Vercel |
-| [**life-dashboard**](https://github.com/Chris1112220/life-dashboard) | A personal dashboard installed as an iPhone web app: weather, calendar, workout tracking, a weekly checklist that resets itself, and reminders pushed in from an iOS Shortcut. No secrets in the source; it's token-protected. | Google Apps Script, Google Sheets & Calendar, Open-Meteo, HTML/JS |
 
 ## Impact (production UiPath bots)
 
-- **~1,800 hours/year saved:** journal-entry bot used by 50 finance staff
-- **$50,000/year saved:** ACH PDF splitter bot running unattended in UiPath Orchestrator ([sanitized code](https://github.com/Chris1112220/uipath-ach-pdf-splitter))
+- **5,000+ hours (~$200K)/year saved:** 10+ production UiPath bots combined
+- **4,300+ hours (~$156K)/year saved:** ACH document-intake bot used by 20 staff accountants ([sanitized code](https://github.com/Chris1112220/uipath-ach-pdf-splitter))
 - **72 hours/year saved:** bank-statement OCR posting bot
 
 *My work bots run on private systems, so their code isn't public. The ACH splitter is published as a sanitized rebuild with fictional data.*
+
+## Certifications
+
+- **Microsoft Applied Skills:** Power Automate (October 2026)
+
+## Education
+
+- **Drexel University:** Graduate Certificate, Computer Science (2023–2024)
+- **Temple University:** BBA, Finance (2007–2012)
 
 ## Currently learning
 
 - **UiPath Agentic:** combining AI agents with RPA robots
 - **ADP:** preparing for the UiPath Automation Developer Professional (ADPv1) certification
-- **Power Automate:** recently earned a certificate
 
 ## Connect
 
